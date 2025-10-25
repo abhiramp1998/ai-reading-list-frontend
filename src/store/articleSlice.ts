@@ -41,11 +41,11 @@ export const fetchSummary = createAsyncThunk(
     
     // This is the code our "mission control" will run.
     // We send the article URL to our Python backend (which we'll build)
-    const response = await fetch("https://your-gcp-function-url-goes-here/summarize", {
+  const response = await fetch("http://127.0.0.1:8082/summarize", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url: article.url }),
-    })
+    });
     
     // If the server fails (e.g., 404, 500 error)
     if (!response.ok) {
