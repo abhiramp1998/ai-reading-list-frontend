@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "AI Reading List",
+  "version": "1.0.0",
+  "description": "Save articles and get AI summaries.",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "host_permissions": [
+    "https://your-gcp-function-url-goes-here/"
+  ]
+}
